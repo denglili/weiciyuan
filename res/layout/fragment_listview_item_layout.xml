@@ -8,9 +8,8 @@
 
     <ImageView
             android:id="@+id/avatar"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:padding="1px"
+            android:layout_width="@dimen/avatar_image_size"
+            android:layout_height="@dimen/avatar_image_size"
             android:background="@drawable/bg_border1"
             android:layout_gravity="left|center_vertical"
             android:layout_marginRight="8dp"
@@ -24,6 +23,14 @@
 
             android:layout_toRightOf="@id/avatar"
             android:textStyle="bold"/>
+    
+     <TextView
+            android:id="@+id/comment_repost_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@id/username"/>
 
     <TextView
             android:id="@+id/time"
@@ -31,7 +38,7 @@
             android:layout_height="wrap_content"
             android:text="12:00"
 
-            android:layout_alignParentRight="true"
+            android:layout_toLeftOf="@id/comment_repost_count"
             android:layout_alignBottom="@id/username"
             />
 
@@ -53,11 +60,13 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/content"
             android:layout_toRightOf="@id/avatar"
+            android:layout_marginLeft="20dp"
             android:id="@+id/repost_and_pic"
             >
         <LinearLayout android:layout_height="wrap_content"
                       android:layout_width="fill_parent"
                       android:gravity="center"
+                      android:layout_marginTop="4dp"
                 >
             <ImageView
                     android:id="@+id/content_pic"
@@ -74,7 +83,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="0dp"
-                android:layout_marginTop="3dp"
+                android:layout_marginTop="8dp"
                 android:orientation="vertical"
                 >
 
@@ -90,7 +99,7 @@
                     />
             <LinearLayout android:layout_height="wrap_content"
                           android:layout_width="fill_parent"
-                          android:layout_marginTop="5dp"
+                          android:layout_marginTop="4dp"
                           android:gravity="center">
                 <ImageView
                         android:id="@+id/repost_content_pic"
@@ -107,9 +116,9 @@
     <ImageView android:id="@+id/repost_flag"
                android:layout_width="20dp"
                android:layout_height="20dp"
-               android:layout_alignRight="@id/avatar"
+               android:layout_alignLeft="@id/content"
                android:layout_alignTop="@id/repost_and_pic"
-               android:layout_marginTop="3dp"
+               android:layout_marginTop="8dp"
                android:layout_below="@id/avatar"
                android:src="?timeline_repost_flag"
             />

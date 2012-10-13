@@ -55,7 +55,7 @@ public class MyURLSpan extends ClickableSpan implements ParcelableSpan {
 
     @Override
     public void updateDrawState(TextPaint tp) {
-        int[] attrs = new int[]{R.attr.link_color};
+        int[] attrs = new int[]{android.R.attr.textColorLink};
         TypedArray ta = GlobalContext.getInstance().getActivity().obtainStyledAttributes(attrs);
         int drawableFromTheme = ta.getColor(0, 430);
         tp.setColor(drawableFromTheme);

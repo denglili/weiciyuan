@@ -76,7 +76,9 @@ public class PictureBitmapWorkerTask extends MyAsyncTask<String, Void, Bitmap> {
                     //because height is 80dp
                     int height = activity.getResources().getDimensionPixelSize(R.dimen.timeline_big_avatar_height);
                     //5 is left layout margin 16 is right layout margin 40 is avatar width 5 is the range between avatar and username
-                    int width = (int) (metrics.widthPixels - (16 + 5 + 40 + 5) * reSize);
+                    int listViewMargin = activity.getResources().getDimensionPixelSize(R.dimen.list_left_right_margin);
+                    int avatarSize = activity.getResources().getDimensionPixelSize(R.dimen.avatar_image_size);
+                    int width = (int) (metrics.widthPixels - (listViewMargin * 2 + (16 + 5 + 20 + 5) * reSize + avatarSize));
 
                     return ImageTool.getMiddlePictureInTimeLine(data, width, height, null);
 

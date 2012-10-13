@@ -18,5 +18,16 @@
  */
 -->
 <resources>
-
+    
+    <style name="MyActionbBar.TabBar" parent="@android:style/Widget.Holo.ActionBar.TabBar">
+    	<item name="android:divider">@null</item>
+	</style>
+	
+    <style name="MyActionBarTabTextStyle" parent="android:TextAppearance.Holo.Widget.ActionBar.Title">
+    	<item name="android:textSize">@dimen/tab_text_size</item>
+	</style>
+	
+    <style name="MyActionBarTabLightDarkTextStyle" parent="@android:style/Widget.Holo.Light.ActionBar.TabText.Inverse">
+    	<item name="android:textSize">@dimen/tab_text_size</item>
+	</style>
 </resources>

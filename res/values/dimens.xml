@@ -2,4 +2,7 @@
 <resources>
 	<dimen name="none">10dp</dimen>
     <dimen name="timeline_big_avatar_height">150dp</dimen>
+    <dimen name="avatar_image_size">40dp</dimen>
+    <dimen name="list_left_right_margin">0dp</dimen>
+    <dimen name="tab_text_size">16sp</dimen>
 </resources>

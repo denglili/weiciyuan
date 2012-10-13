@@ -1,5 +1,6 @@
 package org.qii.weiciyuan.ui.adapter;
 
+import org.qii.weiciyuan.R;
 import android.app.Fragment;
 import android.text.TextUtils;
 import android.view.View;
@@ -50,6 +51,13 @@ public class StatusesListAdapter extends AbstractAppListAdapter<MessageBean> {
             ListViewTool.addJustHighLightLinks(msg);
             holder.content.setText(msg.getListViewSpannableString());
         }
+        
+        if (holder.comment_repost_count != null) {
+        	 String comment_and_repost_count_text = String.format(getActivity().getString(R.string.comment_repost_count_format),
+        			 msg.getComments_count(), msg.getReposts_count());
+        	 holder.comment_repost_count.setText(comment_and_repost_count_text);
+        }
+        
         String time = msg.getListviewItemShowTime();
         UpdateString updateString = new UpdateString(time, holder.time, msg, getActivity());
         if (!holder.time.getText().toString().equals(time)) {

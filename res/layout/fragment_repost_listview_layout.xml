@@ -30,6 +30,8 @@
                 android:smoothScrollbar="true"
                 android:visibility="visible"
                 android:overScrollMode="never"
+                android:layout_marginLeft="@dimen/list_left_right_margin"
+                android:layout_marginRight="@dimen/list_left_right_margin"
                 />
 
 

@@ -175,6 +175,7 @@ public abstract class AbstractAppListAdapter<T extends ItemBean> extends BaseAda
         tp.setFakeBoldText(true);
         holder.content = (TextView) convertView.findViewById(R.id.content);
         holder.repost_content = (TextView) convertView.findViewById(R.id.repost_content);
+        holder.comment_repost_count = (TextView)convertView.findViewById(R.id.comment_repost_count);
         holder.time = (TextView) convertView.findViewById(R.id.time);
         holder.avatar = (ImageView) convertView.findViewById(R.id.avatar);
         holder.content_pic = (ImageView) convertView.findViewById(R.id.content_pic);
@@ -303,6 +304,7 @@ public abstract class AbstractAppListAdapter<T extends ItemBean> extends BaseAda
         TextView repost_content;
         //activity use this to fresh time every second
         public TextView time;
+        TextView comment_repost_count;
         ImageView avatar;
         ImageView content_pic;
         ImageView repost_content_pic;

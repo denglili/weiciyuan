@@ -2,6 +2,8 @@
 <resources>
     <style name="AppTheme_Black_White" parent="@android:style/Theme.Holo.Light.DarkActionBar">
 
+        <item name="android:actionBarTabBarStyle">@style/MyActionbBar.TabBar</item>
+        <item name="android:actionBarTabTextStyle">@style/MyActionBarTabLightDarkTextStyle</item>
         <item name="account">@drawable/account_black</item>
         <item name="account_management">@drawable/account_management_light</item>
         <item name="add">@drawable/accountactivity_new_light</item>
